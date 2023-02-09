@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>ex5.html</h1>
+<th:block th:each="dto : ${list}">
+<!-- 어떤 특정한 html을 맵핑 시킬수 없을때 쓴다. 반복할 때 어느태그에 걸을게 없을때 th블락 사용 -->
+
+	<div>
+		사용자 번호 : <span th:text="${dto.sno}"></span>
+		사용자 이름 : <span th:text="${dto.sno%3 ==0}?${dto.first}:${dto.last}"></span>
+	</div>
+	<hr />
+</th:block>
+</body>
+</html>
